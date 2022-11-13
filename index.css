@@ -1,12 +1,78 @@
-html,
-body {
+/********************
+CSS RESETS
+Thanks @https://piccalil.li/blog/a-modern-css-reset/
+*********************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
   margin: 0;
   padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* screen reader only to visually hide content for sighted users (V.I.) only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 
-/* typography and icons */
-
+/********************
+TYPOGRAPHY & Icons
+*********************/
 h1 {
   color: #0f8cdf;
   margin-bottom: 10px;
@@ -14,7 +80,7 @@ h1 {
 }
 
 i {
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -30,8 +96,9 @@ i {
   color: limegreen;
 }
 
-/* layout */
-
+/********************
+Layout
+*********************/
 .container {
   max-width: 550px;
   width: 90%;
@@ -41,41 +108,47 @@ i {
   align-items: center;
 }
 
+.title {
+  align-items: start;
+}
+
 header {
   padding-bottom: 25px;
 }
 
 .tweet-input-area {
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   width: 100%;
   gap: 10px;
 }
 
-/* textareas + btn */
-
+/********************
+textareas + btn
+*********************/
 textarea {
-  border: 1px solid #999;
+  height: 60px;
+  width: 85%;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid inherit;
   border-radius: 0.3rem;
   resize: none;
-  padding: 10px;
-  margin: 0 0 20px 0;
-  height: 60px;
-  width: 100%;
-  font-size: 20px;
-  line-height: 30px;
+  margin-bottom: 20px;
 }
 
 button {
   font-weight: 600;
+  color: white;
   background-color: #1da1f2;
   border: none;
-  color: white;
   border-radius: 20px;
   cursor: pointer;
 }
 
-/* tweet */
+/********************
+TWEET
+*********************/
 .tweet-btn {
   padding: 10px 19px;
   width: 100%;
@@ -83,28 +156,26 @@ button {
 }
 
 .tweet {
-  border-top: 1px solid lightgray;
-  padding: 20px 0 0 0;
-  width: 100%;
+  max-width: 100%;
+  padding-top: 20px;
   margin: 15px 0;
+  border-top: 1px solid lightgray;
 }
 
 .tweet-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   gap: 10px;
+}
+
+.tweet-inner div {
+  flex-grow: 1;
 }
 
 .tweet-details {
   display: flex;
-  font-size: 13px;
-  justify-content: space-between;
-  /* width: 160px; */
-}
-
-.tweet-detail {
-  display: flex;
-  gap: 4px;
+  gap: 10px;
+  padding-top: 10px;
 }
 
 .tweet-reply {
@@ -122,25 +193,29 @@ button {
 }
 
 .tweet-text {
-  /* width: 207px; */
   font-size: 14px;
   line-height: 20px;
 }
 
-/* images */
-
+/********************
+IMAGES
+*********************/
 .profile-pic {
   border: 1px solid lightgray;
   border-radius: 50%;
   width: 48px;
 }
 
-/* utility */
+/********************
+UTILITY
+*********************/
 .hidden {
   display: none;
 }
 
-/* reply */
+/********************
+REPLY
+*********************/
 .reply {
   margin: 10px 0 10px 50px;
   font-size: 0.8rem;
@@ -161,25 +236,29 @@ button {
 }
 
 .new-reply {
+  width: 75%;
   border: none;
   border-bottom: 1px solid lightgray;
-  width: 70%;
 }
 
-/* Menu Button */
+/********************
+MENU BUTTON
+*********************/
 .tweet-menu i {
   color: #000;
   float: right;
 }
 
-/* Delete */
+/********************
+DELETE
+*********************/
 .delete {
   visibility: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,8 +267,7 @@ button {
 }
 
 .delete i {
-  color: #f00;
-  font-size: 1.2rem;
-  padding: 10px 0;
   width: 3rem;
+  color: #f00;
+  padding: 10px;
 }
