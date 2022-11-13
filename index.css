@@ -195,6 +195,7 @@ TWEET
 .tweet-text {
   font-size: 14px;
   line-height: 20px;
+  width: 70%;
 }
 
 /********************
