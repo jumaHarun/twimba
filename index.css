@@ -69,18 +69,17 @@ body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
 }
-
 /********************
 TYPOGRAPHY & Icons
 *********************/
 h1 {
   color: #0f8cdf;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: .625em;
+  font-size: 1.25rem;
 }
 
 i {
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -100,7 +99,7 @@ i {
 Layout
 *********************/
 .container {
-  max-width: 550px;
+  max-width: 34.375em;
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -113,28 +112,28 @@ Layout
 }
 
 header {
-  padding-bottom: 25px;
+  padding-bottom: 1.5625em;
 }
 
 .tweet-input-area {
   display: flex;
   align-items: start;
   width: 100%;
-  gap: 10px;
+  gap: .625em;
 }
 
 /********************
 textareas + btn
 *********************/
 textarea {
-  height: 60px;
+  height: 3.75em;
   width: 85%;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.25rem;
+  padding: .625em;
   border: 1px solid inherit;
   border-radius: 0.3rem;
   resize: none;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 }
 
 button {
@@ -142,7 +141,7 @@ button {
   color: white;
   background-color: #1da1f2;
   border: none;
-  border-radius: 20px;
+  border-radius: 1.25em;
   cursor: pointer;
 }
 
@@ -150,22 +149,22 @@ button {
 TWEET
 *********************/
 .tweet-btn {
-  padding: 10px 19px;
+  padding: .625em 1.25em;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .tweet {
   max-width: 100%;
-  padding-top: 20px;
-  margin: 15px 0;
+  padding-top: 1.25em;
+  margin: 1em 0;
   border-top: 1px solid lightgray;
 }
 
 .tweet-inner {
   display: flex;
   align-items: start;
-  gap: 10px;
+  gap: .625em;
 }
 
 .tweet-inner div {
@@ -174,26 +173,27 @@ TWEET
 
 .tweet-details {
   display: flex;
-  gap: 10px;
-  padding-top: 10px;
+  gap: .625em;
+  padding-top: .625em;
 }
 
 .tweet-reply {
   border-top: 1px solid lightgray;
-  padding: 20px 0 0 0px;
-  margin: 10px 0 10px 40px;
-  width: 80%;
+  padding-top: 1.25em;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: .625em;
 }
 
 .handle {
-  font-size: 12px;
+  font-size: .75rem;
   font-weight: 500;
   color: #555;
   margin-top: 0;
 }
 
 .tweet-text {
-  font-size: 14px;
+  font-size: .875rem;
   line-height: 20px;
   width: 70%;
 }
@@ -204,7 +204,7 @@ IMAGES
 .profile-pic {
   border: 1px solid lightgray;
   border-radius: 50%;
-  width: 48px;
+  width: 3rem;
 }
 
 /********************
@@ -218,12 +218,12 @@ UTILITY
 REPLY
 *********************/
 .reply {
-  margin: 10px 0 10px 50px;
+  margin: .625em 0 .625em 3.125em;
   font-size: 0.8rem;
 }
 
 .reply-btn {
-  padding: 5px 10px;
+  padding: .3125em .625em;
 }
 
 .reply-label {
@@ -237,7 +237,7 @@ REPLY
 }
 
 .new-reply {
-  width: 75%;
+  width: 80%;
   border: none;
   border-bottom: 1px solid lightgray;
 }
@@ -255,7 +255,7 @@ DELETE
 *********************/
 .delete {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -270,5 +270,5 @@ DELETE
 .delete i {
   width: 3rem;
   color: #f00;
-  padding: 10px;
+  padding: .625em;
 }
